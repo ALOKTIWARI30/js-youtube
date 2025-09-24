@@ -19,8 +19,54 @@
    </div>
 </body>
 <script>
-    document.getElementById('owl').onclick=function(){
-        alert('owl clicked')
-    }
+    //document.getElementById('owl').onclick=function(){
+        //alert('owl clicked')
+    //}
+
+     //attachEvent
+     //jQuery
+
+      //type,timestamp,defaultPrevented
+    //target,toElement,sourceElement,currentelement
+    //clientX,clientY,screenX,screenY
+    //altKey,ctrlKey,keycode,shiftkey
+
+
+
+
+
+//     document.getElementById('images').addEventListener('click',function(e){
+//        // alert('owl clicked again')
+//        console.log("clicked inside the ul")
+//     },false)
+
+
+//     document.getElementById('owl').addEventListener('click',function(e){
+//        // alert('owl clicked again')
+//        console.log("owl clicked")
+//        e.stopPropagation()
+//     },false)
+
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     console.log("google clicked")
+//     e.stopPropagation()
+// e.preventDefault()
+// },false)
+
+ document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt)
+
+
 </script>
 </html>
